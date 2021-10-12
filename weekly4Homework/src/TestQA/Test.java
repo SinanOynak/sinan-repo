@@ -14,14 +14,14 @@ public class Test {
         Kategori sebze = new Kategori("Sebze");
         Kategori cips = new Kategori("cips");
         Kategori cikolata = new Kategori("cikolata");
-        Kategori süt = new Kategori("süt");
+        Kategori sut = new Kategori("süt");
         Kategori sarkuteri = new Kategori("sarkuteri");
 
         meyveSebze.altKategori.add(meyve);
         meyveSebze.altKategori.add(sebze);
         atistirmalik.altKategori.add(cips);
         atistirmalik.altKategori.add(cikolata);
-        kahvaltilik.altKategori.add(süt);
+        kahvaltilik.altKategori.add(sut);
         kahvaltilik.altKategori.add(sarkuteri);
 
         Product elma = new Product("elma","elmaTest",10,8);
