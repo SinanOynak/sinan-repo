@@ -6,10 +6,10 @@ import pages.CartPage;
 public class CartPageSteps {
     CartPage cartPage = new CartPage();
 
-    @Given("Quantity section is set to {} and {} button is clicked")
-    public void checkQuantity(String number, String updateCart){
+    @Given("Quantity section is set to {} and Update Cart button is clicked")
+    public void checkQuantity(String number){
         cartPage.increaseQuantityProduct(number);
-        cartPage.clickUpdateCart(updateCart);
+        cartPage.clickUpdateCart();
     }
 
     @Given("It is checked that the total price of the product has increased correctly")

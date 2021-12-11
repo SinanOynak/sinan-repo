@@ -30,4 +30,6 @@ Feature: QA Shopping
     * Wait for 2
     * It is checked to go to the Products page
     * Products are sorted with the Sort by latest option
+    * Click on the Add to Cart buttons in the first 3 rows
+    * Click View Cart button
     * Wait for 10

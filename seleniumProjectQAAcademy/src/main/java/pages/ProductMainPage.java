@@ -3,6 +3,7 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Wait;
 import utilis.Utilities;
 
 import java.util.List;
@@ -11,9 +12,17 @@ import static org.junit.Assert.assertTrue;
 
 public class ProductMainPage extends Utilities {
 
-    ////ul[@class='products columns-3']/li[1]
-    @FindBy(css = "[data-product_id ='205']")
+    @FindBy(xpath = "//ul[@class='products columns-3']/li[1]/a[2]")
     public WebElement firstAddToCart;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li[1]/a[3]")
+    public WebElement firstViewCart;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li[2]/a[2]")
+    public WebElement secondAddToCart;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li[3]/a[2]")
+    public WebElement thirdAddToCart;
 
     @FindBy(css = "li [title = 'View your shopping cart']")
     public WebElement basketIcon;
@@ -28,7 +37,17 @@ public class ProductMainPage extends Utilities {
         Assert.assertEquals(ActualTitle,ExpectedTitle);
     }
 
-    public void firstAddToCartButton(String firstAddCart){firstAddToCart.click();}
+    public void firstAddToCartButton(){firstAddToCart.click();}
+
+    public void addToCartButtonForSort(){
+        firstAddToCart.click();
+        secondAddToCart.click();
+        thirdAddToCart.click();
+    }
+
+    public void clickViewButton(){
+       firstViewCart.click();
+    }
 
     public void clickBasketIcon(){basketIcon.click();}
 

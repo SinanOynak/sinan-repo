@@ -35,7 +35,7 @@ public class CartPage extends Utilities {
         productQuantity.sendKeys("3");
     }
 
-    public void clickUpdateCart(String updateCart){
+    public void clickUpdateCart(){
         updateCartButton.click();
     }
 
