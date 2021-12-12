@@ -35,7 +35,7 @@ public class HomePage extends Utilities {
         Assert.assertEquals(actualTitle,expectedTitle);
     }
 
-    public void clickShopNowButton(String buttonName){
+    public void clickShopNowButton(){
         shopNowButton.click();
     }
 

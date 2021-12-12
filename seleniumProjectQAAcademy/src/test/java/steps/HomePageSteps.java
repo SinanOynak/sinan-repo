@@ -9,8 +9,8 @@ public class HomePageSteps {
     @Given("It is checked whether you are on the homepage or not")
     public void checkHomePageTitle(){homePage.checkHomepage();}
 
-    @Given("Click on the {} button on the banner")
-    public void clickShopNowButton(String buttonName){homePage.clickShopNowButton(buttonName);}
+    @Given("Click on the SHOP NOW button on the banner")
+    public void clickShopNowButton(){homePage.clickShopNowButton();}
 
     @Given("Scrolls to the bottom of the page")
     public void checkScrollPageDown(){homePage.scrollPageDown();}

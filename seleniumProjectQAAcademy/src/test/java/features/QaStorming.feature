@@ -10,7 +10,8 @@ Feature: QA Shopping
     * Wait for 2
     * Click on the basket icon in the navigation bar
     * It is checked whether the relevant product has been added to the cart or not
-    * Quantity section is set to 3 and Update Cart button is clicked
+    * Quantity section is set to 3
+    * Click Update Cart button
     * Wait for 2
     * It is checked that the total price of the product has increased correctly
     * Wait for 2
@@ -31,5 +32,19 @@ Feature: QA Shopping
     * It is checked to go to the Products page
     * Products are sorted with the Sort by latest option
     * Click on the Add to Cart buttons in the first 3 rows
+    * Wait for 4
     * Click View Cart button
+    * It is checked that the cart page is opened and added correctly
+    * Number of the most expensive product in the cart is set to 2 and the number of the cheapest product is set to 4
+    * Click Update Cart button
+    * Check that the cart is updated correctly
+    * Click Proceed to checkout button
+    * Fill Billing Details Form
+    * Fill Order notes
+    * Wait for 2
+    * Click checkbox for I would like to receive exclusive emails with discounts and product information
+    * Wait for 2
+    * Click on the basket icon in the navigation bar
+    * Wait for 2
+    #* All items in the basket are deleted respectively ×
     * Wait for 10
