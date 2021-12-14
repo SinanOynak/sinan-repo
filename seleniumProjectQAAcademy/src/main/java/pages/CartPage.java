@@ -2,11 +2,18 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilis.Utilities;
 
+import java.sql.Driver;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends Utilities {
@@ -47,8 +54,6 @@ public class CartPage extends Utilities {
     @FindBy(css = "[class='checkout-button button alt wc-forward']")
     public WebElement btnProceedToCheckout;
 
-    @FindBy(xpath = "//td[@class = 'product-remove']")
-    public List<WebElement> listDeleteProduct;
 
     public void increaseQuantityProduct(String number) {
         firstProductQuantity.sendKeys(Keys.CONTROL + "a");
@@ -79,9 +84,7 @@ public class CartPage extends Utilities {
         System.out.println(totalPriceAmount);
     }
 
-    public void clickDeleteProduct(){
-     deleteProduct.click();
-    }
+    public void clickDeleteProduct(){deleteProduct.click();}
 
     public void checkDeleteProduct(String deleteControlText){
      String actualInfo = cartEmptyInfo.getText();
@@ -122,14 +125,15 @@ public class CartPage extends Utilities {
         Assert.assertEquals(actualTitle,expectedTitle);
     }
 
-    /*public void deleteProduct(String deleteItemName){
-        for(WebElement dltProduct: listDeleteProduct){
-            if (dltProduct.getText().equalsIgnoreCase(deleteItemName)){
-                dltProduct.click();
-                return;
-            }
+    //String deleteItemName
+    public void deleteProduct() {
+        for(int i=0; i<3; i++){
+            WebDriverWait wait = new WebDriverWait(driver,30000);
+            wait.until(ExpectedConditions.elementToBeClickable(deleteProduct));
+            deleteProduct.click();
+            waitFor(5);
         }
-        Assert.fail("No menu named "+listDeleteProduct+" could be located on the home page");
-    }*/
+    }
+
 
 }

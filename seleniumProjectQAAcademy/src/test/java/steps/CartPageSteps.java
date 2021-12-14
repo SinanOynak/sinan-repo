@@ -50,8 +50,8 @@ public class CartPageSteps {
         cartPage.increaseQuantityProduct(cheapProductAmount,expensiveProductAmount);
     }
 
-   /* @Given("All items in the basket are deleted respectively {}")
-    public void checkProduct(String icon){
-        cartPage.deleteProduct(icon);
-    }*/
+    @Given("All items in the basket are deleted respectively ×")
+    public void clickAllDeleteProduct(){
+        cartPage.deleteProduct();
+    }
 }

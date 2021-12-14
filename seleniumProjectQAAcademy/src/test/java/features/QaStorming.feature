@@ -38,6 +38,7 @@ Feature: QA Shopping
     * Number of the most expensive product in the cart is set to 2 and the number of the cheapest product is set to 4
     * Click Update Cart button
     * Check that the cart is updated correctly
+    * Wait for 1
     * Click Proceed to checkout button
     * Fill Billing Details Form
     * Fill Order notes
@@ -46,5 +47,5 @@ Feature: QA Shopping
     * Wait for 2
     * Click on the basket icon in the navigation bar
     * Wait for 2
-    #* All items in the basket are deleted respectively ×
-    * Wait for 10
+    * All items in the basket are deleted respectively ×
+    * Wait for 5
