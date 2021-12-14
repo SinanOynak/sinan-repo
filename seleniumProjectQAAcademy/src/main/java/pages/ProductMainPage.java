@@ -30,6 +30,9 @@ public class ProductMainPage extends Utilities {
     @FindBy(css = "[name ='orderby'] option")
     public List<WebElement> chkProductSort;
 
+    @FindBy(css = "[class='button product_type_simple add_to_cart_button ajax_add_to_cart']")
+    public List<WebElement> testAddButton;
+
 
     public void checkProductMainPage(){
         String ActualTitle = driver.getTitle();
@@ -45,9 +48,7 @@ public class ProductMainPage extends Utilities {
         thirdAddToCart.click();
     }
 
-    public void clickViewButton(){
-       firstViewCart.click();
-    }
+    public void clickViewButton(){firstViewCart.click();}
 
     public void clickBasketIcon(){basketIcon.click();}
 
@@ -66,5 +67,4 @@ public class ProductMainPage extends Utilities {
         }
         Assert.fail("No "+ chkProductSort +" could be located");
     }
-
 }

@@ -54,7 +54,6 @@ public class CartPage extends Utilities {
     @FindBy(css = "[class='checkout-button button alt wc-forward']")
     public WebElement btnProceedToCheckout;
 
-
     public void increaseQuantityProduct(String number) {
         firstProductQuantity.sendKeys(Keys.CONTROL + "a");
         firstProductQuantity.sendKeys(Keys.DELETE);
@@ -125,7 +124,6 @@ public class CartPage extends Utilities {
         Assert.assertEquals(actualTitle,expectedTitle);
     }
 
-    //String deleteItemName
     public void deleteProduct() {
         for(int i=0; i<3; i++){
             WebDriverWait wait = new WebDriverWait(driver,30000);
@@ -134,6 +132,5 @@ public class CartPage extends Utilities {
             waitFor(5);
         }
     }
-
 
 }
